@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyPage</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <ul class="navigation">
+        <img src="eye.png" alt="eye_logo" width="50px" height="50px">
+        <li><a class = "notactive" href="#home">Home</a></li>
+        <li><a class = "notactive" href="#doc">Documentation</a></li>
+        <li><a class = "notactive" href="#sources">Sources</a></li>
+        <li><a class = "notactive" href="#contact">Contact Us</a></li>
+      </ul>
+
+      <main>
+        <section id="home">
+          <div class="no">
+            <div class="image">
+                <h1 class = "home">HOME</h1>
+            </div>
+            <div id="banner">
+            <p style="float:left" class="homep">
+
+              I’m a highschool student who adores every aspect of computers! I'm especially interested in VR, AR, Game development along with parts of AI. I'm currently learning about the computer hardware and WPILIB library for my first FRC year, studying Flutter and exploring some front end languages.
+
+              I also am a huge animation and 3D design geek so I love working on Occulus Quest 2 games as well :) I started side loading and making my XR projects in Unity this summer. Hope to improve myself more on this topic!
+
+              <br><br>
+              The problem I want to solve is related to my reflections on mortality. I understand that a lot of us are developing different kinds of technologies in various fields. However, I believe we miss the issue that our lives will end one day just like everyone around us. I feel like this is a missing spot in human history, an undeveloped field.  I think upon developing a Metaverse in which our consciousness can be programmed. My enthusiasm for computer science and programming has developed over the idea of programming our consciousness.
+
+              <br><br>
+
+              I feel passionate about making a difference in paralysed patients' life because I feel a connection between people who are like me, bullied, excluded and wanted to delve into alternative realities and them, people who felt our world's limitations heavily due to their bodies, ostracized from society and wanted an escape from the reality we live in.
+              <br><br>
+              This application I designed allows you to control your computer with your eyes, is free and could be used on both macOS and Windows computers.
+              <br><br>
+              There are also resources for online jobs and education that could be efficiently used with my application. Hope this helps!
+            </div></p>
+      </section>
+
+      <section id="doc">
+        <h1 class = "home">Documentation</h1>
+        <a href="https://docs.google.com/document/d/1gTPCXcGHEItkK_thh6Awej-absHq0Moit-pSq7b1Ypk/edit">
+        <img class= "docu" src="documentation.png" alt="documentation_logo" width="200px" height="250px"></a>
+        <p>This is a documentation page I prepared. It is 8 pages long and consists of how I used my knowledge on Open CV, MediaPipe and Pyautogui to create this eye tracking application. It can be a fun guide for sofware developers to explore and learn more about machine learning. You can access the google document by clicking on the image above.</p>
+      </section>
+
+      <section id="file">
+        <h2> Files</h2>
+        <a href="https://drive.google.com/file/d/19P8ssKhQ1hxgKNxoyB0mNZnzzf9eOdGM/view?usp=sharing">Download DMG File for macOS</a>
+        <br> <br>
+        <a href="https://drive.google.com/file/d/1VBPx7ooPyek-zwH-prPd6QYUvt_zbjaw/view?usp=sharing">Download EXE File for Windows</a>
+      </section>
+
+      <section id="sources">
+        <h1 class = "home">Sources</h1>
+        <p>This is the source section of my website. I gatherered specific websites in order for you to reach specific job qualifications or proper online education with the tool I provided.</p>
+
+        <div></div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Website Name</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UpWork</td>
+              <td>https://www.upwork.com/</td>
+            </tr>
+            <tr>
+              <td>PicoWorkers</td>
+              <td>https://sites.google.com/view/picoworkers-com/inicio</td>
+            </tr>
+            <tr>
+              <td>MicroWorkers</td>
+              <td>https://www.microworkers.com/</td>
+            </tr>
+            <tr>
+              <td>RapidWorkers</td>
+              <td>https://rapidworkers.com/</td>
+            </tr>
+            <tr>
+              <td>Khan Academy</td>
+              <td>https://www.khanacademy.org/</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td>Eba</td>
+            <td>https://www.eba.gov.tr/</td>
+          </tfoot>
+        </table>
+      </section>
+
+
+      <section id="contact">
+        <h1 class = "home">Contact Us</h1>
+        <p>This is the contact page of my website. It will be updated, after the Rise videos are watched by peers. Right now, I cannot share my name or any details to them, therefore links direct you to the main page of instagram and linkedin.</p>
+        <div class="con">
+          <a href="https://www.instagram.com/" target="_blank"><img class="contact1" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-1024.png" /></a>
+          <a href="https://www.linkedin.com/" target="_blank"><img class="contact1" src="https://yt3.ggpht.com/9XmuxL_LL7CxAOOlbBgTnJIo2uHpoLKHhWzlPt7O49ULQmvBSJlxk1RpX3pJ8jkRBkD6p9BIRg=s900-c-k-c0x00ffffff-no-rj" /></a>
+      </section>
+
+      <footer>
+        <p>Copyright Rise Project ©2023, Visitor Count: <span id="count"></span></p>
+        <script>
+          // Check if localStorage is supported
+          if (typeof(Storage) !== "undefined") {
+            // If "count" is not set in localStorage, set it to 0
+            if (localStorage.getItem("count") == null) {
+              localStorage.setItem("count", 0);
+            }
+            // Get the current count from localStorage
+            var count = localStorage.getItem("count");
+            // Increment the count by 1
+            count++;
+            // Update the count in localStorage
+            localStorage.setItem("count", count);
+            // Display the count on the page
+            document.getElementById("count").innerHTML = count;
+          } else {
+            document.getElementById("count").innerHTML = "Sorry, your browser does not support web storage...";
+          }
+        </script>
+        </footer>
+
+
+  </div>
+
+
+</body>
+</html>
