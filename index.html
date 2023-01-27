@@ -51,9 +51,9 @@
 
       <section id="file">
         <h2> Files</h2>
-        <a href="https://drive.google.com/drive/folders/1UMITMDO8TaLcHi9ybIYzT1NkMiTHvtgi?usp=sharing">Download DMG File for macOS</a>
+        <a href="https://drive.google.com/drive/folders/1UMITMDO8TaLcHi9ybIYzT1NkMiTHvtgi?usp=sharing">Download DMG File for macOS</a> <br> <p>Still in development, file is corrupt in most computers because of security reasons </p>
         <br> <br>
-        <a href="https://drive.google.com/file/d/1VBPx7ooPyek-zwH-prPd6QYUvt_zbjaw/view?usp=sharing">Download EXE File for Windows</a>
+        <a href="https://drive.google.com/file/d/1VBPx7ooPyek-zwH-prPd6QYUvt_zbjaw/view?usp=sharing">Download EXE File for Windows</a> <br> <p>Still in development, file is corrupt in most computers because of security reasons </p>
       </section>
 
       <section id="sources">
@@ -109,25 +109,30 @@
 
       <footer>
         <p>Copyright Rise Project ©2023, Visitor Count: <span id="count"></span></p>
-        <script>
-          // Check if localStorage is supported
-          if (typeof(Storage) !== "undefined") {
-            // If "count" is not set in localStorage, set it to 0
-            if (localStorage.getItem("count") == null) {
-              localStorage.setItem("count", 0);
-            }
-            // Get the current count from localStorage
-            var count = localStorage.getItem("count");
-            // Increment the count by 1
-            count++;
-            // Update the count in localStorage
-            localStorage.setItem("count", count);
-            // Display the count on the page
-            document.getElementById("count").innerHTML = count;
+        <?php
+
+          $viewer_count_file = 'viewer_count.txt';
+
+          // Check if the viewer count file exists
+          if (file_exists($viewer_count_file)) {
+              // Get the current viewer count
+              $viewer_count = (int) file_get_contents($viewer_count_file);
           } else {
-            document.getElementById("count").innerHTML = "Sorry, your browser does not support web storage...";
+              // Create the viewer count file with a starting value of 0
+              $viewer_count = 0;
+              file_put_contents($viewer_count_file, $viewer_count);
           }
-        </script>
+
+          // Increment the viewer count
+          $viewer_count++;
+
+          // Update the viewer count file
+          file_put_contents($viewer_count_file, $viewer_count);
+
+          echo 'Viewer count: ' . $viewer_count;
+
+        ?>
+
         </footer>
 
 
