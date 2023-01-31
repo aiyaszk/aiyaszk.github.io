@@ -108,30 +108,8 @@
       </section>
 
       <footer>
-        <p>Copyright Rise Project ©2023, Visitor Count: <span id="count"></span></p>
-        <?php
-
-          $viewer_count_file = 'viewer_count.txt';
-
-          // Check if the viewer count file exists
-          if (file_exists($viewer_count_file)) {
-              // Get the current viewer count
-              $viewer_count = (int) file_get_contents($viewer_count_file);
-          } else {
-              // Create the viewer count file with a starting value of 0
-              $viewer_count = 0;
-              file_put_contents($viewer_count_file, $viewer_count);
-          }
-
-          // Increment the viewer count
-          $viewer_count++;
-
-          // Update the viewer count file
-          file_put_contents($viewer_count_file, $viewer_count);
-
-          echo 'Viewer count: ' . $viewer_count;
-
-        ?>
+        <p>Copyright Rise Project ©2023, Visitor Count:  <a href='https://www.symptoma.ro/'>Căutare de informații medicale</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7ea38a27de672eb25efdb7d0c7e62d2b9419cdfa'></script>
+<script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/998580/t/3"></script>
 
         </footer>
 
