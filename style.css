@@ -90,17 +90,19 @@ th, td {
   width: 77%;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between; 
 
-#banner {
-  background-image: url("https://pyimagesearch.com/wp-content/uploads/2018/05/opencv_tutorial_header.jpg");
-  background-size: cover;
-  background-position: bottom center;
-  height: 500px;
-  width: 500px;
-  border: 3px solid lightblue;
-  border-radius: 50%;
-  margin-top: 50px;
-  margin-left: 70px;
+}
+
+.imageee {
+  width: 40%;
+  padding: 20px;
+}
+
+.teeext {
+  width: 60%;
 }
 
 .homep {
@@ -131,16 +133,15 @@ h1 {
   font-style: Utopia;
 }
 
-.docu{
-  margin-left: 620px;
-}
-
-.con {
-  margin-top: 10px;
-  margin-left: 620px;
-}
 
 footer {
-  margin-top: 10px;
-  margin-left: 560px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+}
+
+.center-element {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
 }
